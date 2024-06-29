@@ -1,95 +1,62 @@
 const questions = [
   {
-    question: 'You wake up as a dim sum item in a magical dim sum world. What is your first reaction?',
+    question: "You're magically teleported to a town until night time. There is a gated entrance and next to it is a sign that says \"Dim Sum Dale\". As you walk past the gates, what's your first move?",
     options: [
-      ['Explore and meet other dim sum items!', 'E'],
-      ['Stay in your steamer and observe quietly.', 'I'],
-      ['Find a friend to share this experience with.', 'F'],
-      ['Worry about how you got here and how to get back.', 'N'],
+      ['Excitedly introduce yourself to the first dim sum person you meet', 'E'],
+      ['Find a quiet bamboo basket to sit in and think about if you are a dim sum dish too', 'I'],
     ],
   },
   {
-    question: 'In this world, a dumpling party is happening. What do you do?',
+    question: "You don't see anyone yet, but there is an information booth ahead with a town map.",
     options: [
-      ['Join the party and socialize with everyone.', 'E'],
-      ['Find a quiet corner to enjoy the party from a distance.', 'I'],
-      ['Help organize the party to make sure everyone is having fun.', 'F'],
-      ["Wonder why there's a party and what the purpose is.", 'N'],
+      ['Glance at the map quickly and pick a random area to explore', 'P'],
+      ['Make a note of where everything is and plan out your day', 'J'],
     ],
   },
   {
-    question: 'A steamed bun asks you for advice on filling choices. How do you respond?',
+    question: 'To the right of the information booth is a small shop. A siu mai leaves the shop and notices you, and starts approaching.',
     options: [
-      ['Give a logical analysis of each option.', 'T'],
-      ['Suggest a filling that feels right for them.', 'F'],
-      ['Ask them about their preferences and feelings.', 'F'],
-      ['Help them choose the most popular filling.', 'J'],
+      ["I don't see any legs, how is it moving?", 'S'],
+      ['I wonder what it is thinking, will it think I am normal? What is normal for dim sum?', 'N'],
     ],
   },
   {
-    question: 'You have to choose a path through the Dim Sum Forest. Which path do you take?',
+    question: 'The siu mai introduces itself and notices you are a new face. It mentions you arrived just in time for the annual town parade! It mentions the parade is in an 30 minutes',
     options: [
-      ['The well-trodden path with clear directions.', 'J'],
-      ['The mysterious path that no one has explored.', 'P'],
-      ['The path that your friends are taking.', 'F'],
-      ['The path that seems safest and most predictable.', 'S'],
+      ['Ask it when and where the parade is so you can get there early and find a good view', 'J'],
+      ['Explore a bit more before figuring out where the parade is later', 'P'],
     ],
   },
   {
-    question: 'A fortune cookie gives you a vague fortune. How do you react?',
+    question: 'It says it just got groceries and was about to cook with friends after the parade. It invites you to join them later!',
     options: [
-      ['Analyze the fortune for hidden meanings.', 'N'],
-      ['Take it as it is and move on.', 'S'],
-      ['Discuss it with others to see their interpretations.', 'F'],
-      ['Feel excited about the possibilities it suggests.', 'N'],
+      ['Accept the invitation, this is a chance to get to know who else is living here', 'E'],
+      ["Thank it for the invitation, but say you don't want to bother them. What if you can't even eat what they eat?", 'I'],
     ],
   },
   {
-    question: 'You meet a wise old dumpling who offers you advice. How do you feel?',
+    question: 'The parade starts, and floats start moving down the main road.',
     options: [
-      ['Grateful and eager to learn.', 'T'],
-      ['Skeptical but curious.', 'N'],
-      ['Comforted and reassured.', 'F'],
-      ['Worried about why you need advice.', 'N'],
+      ['Admire all the pretty designs, constumes, and music being played', 'S'],
+      ['Think about what dim sum culture and history is like', 'N'],
     ],
   },
   {
-    question: 'You find a map to a secret dim sum treasure. What do you do?',
+    question: 'The parade is now ending. The mayor of the town shows up and announces there is a "best float" contest as well. Everyone is given a ballot to vote for the best float.',
     options: [
-      ['Follow the map immediately.', 'J'],
-      ['Analyze the map for authenticity.', 'T'],
-      ['Ask others if they want to join the adventure.', 'E'],
-      ['Wonder if the treasure is worth finding.', 'N'],
+      ['Choose the one that required the most craftsmanship', 'T'],
+      ['Choose the one that expressed the most personality', 'F'],
     ],
   },
   {
-    question: 'In the Dim Sum Market, what catches your eye?',
+    question: "It's now night time. Suddenly giant chopsticks from the sky pick you up and return you to everyday human life. As you are being lifted away, a village elder yells some life advice.",
     options: [
-      ['The bustling activity and variety of items.', 'E'],
-      ['A quiet stall with unique offerings.', 'I'],
-      ['A vendor with a warm, friendly smile.', 'F'],
-      ['An intriguing item with a mysterious background.', 'N'],
-    ],
-  },
-  {
-    question: 'How do you handle conflict with another dim sum item?',
-    options: [
-      ['Address it directly and logically.', 'T'],
-      ['Avoid it and hope it resolves itself.', 'I'],
-      ['Seek a compromise that satisfies both parties.', 'F'],
-      ['Feel stressed and overthink the situation.', 'N'],
-    ],
-  },
-  {
-    question: 'Your journey in the dim sum world is ending. What are your thoughts?',
-    options: [
-      ['Reflect on the logical lessons learned.', 'T'],
-      ['Think about the friends made along the way.', 'F'],
-      ['Plan to return and explore more.', 'J'],
-      ['Worry about transitioning back to the real world.', 'N'],
+      ["Thank the elder for advice and analyze the elder's words. Does dim sum advice apply to a human?", 'T'],
+      ["Appreciate the kindness of the elder. I'm glad a dim sum cares!", 'F'],
     ],
   },
 ];
+
 
 let currentQuestionIndex = 0;
 
