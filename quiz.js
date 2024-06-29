@@ -111,6 +111,13 @@ function selectOption(option) {
   loadQuestion();
 }
 
+function shouldShowBonusQuestion() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  return urlParams.has('s');
+}
+
 function displayResult() {
   const resultContainer = document.getElementById('result');
   const personality =
@@ -119,7 +126,25 @@ function displayResult() {
     (scores.T > scores.F ? 'T' : 'F') +
     (scores.J > scores.P ? 'J' : 'P');
 
-  resultContainer.innerHTML = `<h2>Your Dim Sum Personality is: ${personality}</h2>`;
+  let extraQuestion = '';
+
+  if (shouldShowBonusQuestion()) {
+    extraQuestion = `
+      <div class="question fade-in">
+        <h2>Bonus Question!</h2>
+        <div class="options">
+          <form action="bonus.html">
+            <button type="submit">What? 🤨</button>
+          </form>
+        </div>
+      </div>
+    `;
+  }
+
+  resultContainer.innerHTML = `
+    <h2>Your Dim Sum Personality is: ${personality}</h2>
+    ${extraQuestion}
+  `;
   resultContainer.style.display = 'block';
 
   document.getElementById('quiz').style.display = 'none';
