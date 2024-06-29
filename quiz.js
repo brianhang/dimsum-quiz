@@ -5,6 +5,7 @@ const questions = [
       ['Excitedly introduce yourself to the first dim sum person you meet', 'E'],
       ['Find a quiet bamboo basket to sit in and think about if you are a dim sum dish too', 'I'],
     ],
+    image: 'intro.png',
   },
   {
     question: "You don't see anyone yet, but there is an information booth ahead with a town map.",
@@ -82,9 +83,18 @@ function loadQuestion() {
 
   const question = questions[currentQuestionIndex];
   const quizContainer = document.getElementById('quiz');
+
+  const image = question.image;
+  let imageHtml = '';
+
+  if (image != null) {
+    imageHtml = `<img src="${image}" width="100%">`
+  }
+
   quizContainer.innerHTML = `
     <div class="question">
       <h2>${question.question}</h2>
+      ${imageHtml}
       <div class="options">
         ${question.options.map(([label, key]) => `
             <button onclick="selectOption('${key}')">${label}</button>
